@@ -6,4 +6,4 @@ if (!userName) {
     userName = 'stranger';
 }
 
-alert(`Hello, ${userName}! How are you?`);
+alert(`Nice to meet you ${userName}`);
