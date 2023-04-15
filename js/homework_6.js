@@ -3,13 +3,9 @@
 // get birth year
 const birthYear = +prompt('Enter your year of birth, number only');
 
-function getAge(year) {
-    const date = new Date();
-    return date.getFullYear() - year;
-}
-
 if (birthYear) {
-    const age = getAge(birthYear);
+    const date = new Date();
+    const age = date.getFullYear() - birthYear;
     alert(`You are ${age} years old or will be this year`);
 } else {
     alert('You didn\'t enter a year');
