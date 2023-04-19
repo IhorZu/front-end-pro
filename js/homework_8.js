@@ -1,9 +1,9 @@
 'use strict';
 
 const MAX_ELEMENTS_NUMBER = 10;
-const MIN_LENGTH = 5;
-const SPLICE_START = 2;
-const SPLICE_DELETE_COUNT = 4;
+const MIN_LENGTH = 4;
+const SPLICE_START = 1;
+const SPLICE_DELETE_COUNT = 3;
 const elementsNumber = +prompt('Enter number of elements in array (number from 1 to 10)');
 
 if (elementsNumber && elementsNumber <= MAX_ELEMENTS_NUMBER) {
