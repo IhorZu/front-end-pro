@@ -1,6 +1,6 @@
 'use strict';
 
-const arr = [10,1,500,15,102,3,38,11,8,14,0,12,80,174,3,20,25,51,198,74,9]; // input data
+const arr = [10,1,500,15,102,3,38,11,8,14,0,12,80,174,3,20,25,51,198,74,9]; // initial data
 let result = [];
 
 /* 1. Display the numbers from 10 to 20 on the page in one line separated by commas
