@@ -13,7 +13,7 @@ const removeElement = (array, value) => {
     }
 }
 
-const numValue = prompt('Enter the number you would like to remove from the array (from 1 to 9)');
+const numValue = prompt('Enter the number you would like to remove from array (from 1 to 9)');
 
 if (numValue !== null) {
     removeElement(arr, +numValue);
