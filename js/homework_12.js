@@ -18,4 +18,3 @@ const generateKey = (length, char) => {
 const key = generateKey(KEY_LENGTH, characters);
 
 console.log(key);
-
