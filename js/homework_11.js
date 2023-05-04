@@ -20,4 +20,3 @@ if (numValue !== null) {
 } else {
     console.log('You didn\'t enter any value');
 }
-
