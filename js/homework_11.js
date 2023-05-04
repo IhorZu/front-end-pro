@@ -2,7 +2,7 @@
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-function removeElement(array, value) {
+const removeElement = (array, value) => {
     const index = array.indexOf(value);
 
     if (index !== -1) {
@@ -13,6 +13,11 @@ function removeElement(array, value) {
     }
 }
 
-const numValue = +prompt('Enter the number you would like to remove');
+const numValue = prompt('Enter the number you would like to remove from the array (from 1 to 9)');
 
-removeElement(arr, numValue);
+if (numValue !== null) {
+    removeElement(arr, +numValue);
+} else {
+    console.log('You didn\'t enter any value');
+}
+
