@@ -11,4 +11,4 @@ const pow = (num, degree) => {
     return num * pow(num, degree - 1);
 }
 
-console.log( pow(5, 3) );
+console.log( pow(5, 5) );
