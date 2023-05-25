@@ -1,24 +1,26 @@
 'use strict';
 
-class Human {
-    constructor (name, gender) {
-        this.name = name || 'Ihor';
-        this.gender = gender || 'male';
-    }
-}
+import { Human } from './Human.js';
+import { Apartment } from './Apartment.js';
+import { Building } from './Building.js';
 
-class Apartment {
-    residents = [];
+// init
+const Ihor = new Human();
+const Anna = new Human('Anna', 'female');
+const John = new Human('John');
+const Katie = new Human('Katie', 'female');
 
-    addResident(human) {
-        this.residents.push(human);
-    }
-}
+const apartment1 = new Apartment();
+const apartment2 = new Apartment();
+const apartment3 = new Apartment();
 
-const human = new Human();
-const apartment = new Apartment();
+apartment1.addResident(Ihor);
+apartment1.addResident(Anna);
+apartment2.addResident(John);
+apartment3.addResident(Katie);
 
-console.log(human);
-console.log(apartment);
+const building = new Building(10);
 
-apartment.addResident(human);
+building.addApartment(apartment1);
+building.addApartment(apartment2);
+building.addApartment(apartment3);

@@ -1,6 +1,7 @@
-export class Human {
-    constructor (name, gender) {
-        this.name = name || 'Ihor';
-        this.gender = gender || 'male';
+export class Apartment {
+    residents = [];
+
+    addResident(human) {
+        this.residents.push(human);
     }
 }

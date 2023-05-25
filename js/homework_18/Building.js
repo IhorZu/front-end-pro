@@ -1,7 +1,17 @@
-export class Apartment {
-    residents = [];
+export class Building {
+    apartments = [];
 
-    addResident(human) {
-        this.residents.push(human);
+    constructor (maxApartments) {
+        this.maxApartments = maxApartments;
+    }
+
+    addApartment(apartment) {
+        const apartmentsNumber = this.apartments.length;
+        const maxApartments = this.maxApartments;
+        if (apartmentsNumber < maxApartments) {
+            this.apartments.push(apartment);
+        } else {
+            console.log('The building is already full of apartments');
+        }
     }
 }
