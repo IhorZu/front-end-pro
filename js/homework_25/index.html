@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="author" content="Ihor Zuikov">
+    <title>Front End Pro</title>
+    <script src="index.js" defer></script>
+    <style>
+        .votes {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .votes__item {
+            display: flex;
+            flex-direction: column;
+            margin: 0 4px;
+        }
+        .votes__btn {
+            padding: 4px;
+            border: 0;
+            background-color: transparent;
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+            user-select: none;
+        }
+        .votes__number {
+            text-align: center;
+            font: 12px/1 sans-serif;
+        }
+        .votes__number::before {
+            content: attr(data-votes);
+        }
+    </style>
+</head>
+<body>
+    <ul class="votes">
+        <li class="votes__item">
+            <button class="votes__btn">&#128077</button>
+            <span class="votes__number"></span>
+        </li>
+        <li class="votes__item">
+            <button class="votes__btn">&#128525</button>
+            <span class="votes__number"></span>
+        </li>
+        <li class="votes__item">
+            <button class="votes__btn">&#128514</button>
+            <span class="votes__number"></span>
+        </li>
+        <li class="votes__item">
+            <button class="votes__btn">&#128546</button>
+            <span class="votes__number"></span>
+        </li>
+        <li class="votes__item">
+            <button class="votes__btn">&#128545</button>
+            <span class="votes__number"></span>
+        </li>
+    </ul>
+</body>
+</html>
