@@ -48,7 +48,6 @@ export class Student {
         const totalAttendance = totalClasses.filter((value) => value === true);
         const averageAttendance = totalAttendance.length / totalClasses.length;
         const averageScore = this.getAverageScore();
-        console.log(averageAttendance, averageScore);
 
         if (averageAttendance > 0.9 && averageScore > 90) {
             console.log('Good job!');
