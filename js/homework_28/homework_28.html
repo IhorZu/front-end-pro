@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="author" content="Ihor Zuikov">
+    <title>Front End Pro</title>
+    <script type="module" src="index.js"></script>
+    <style>
+        .weather {
+            display: none;
+        }
+        .weather--is-visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <label for="text-field">Enter city name you would like to get weather data</label>
+    <br />
+    <input id="text-field" type="text">
+
+    <article class="weather">
+        <h2 class="weather__city"></h2>
+        <p class="weather__icon"></p>
+        <p class="weather__temp">Temperature: <span class="weather__temp-data"></span></p>
+        <p class="weather__pressure">Pressure: <span class="weather__pressure-data"></span></p>
+        <p class="weather__description"></p>
+        <p class="weather__humidity">Humidity: <span class="weather__humidity-data"></span></p>
+        <p class="weather__speed">Wind speed: <span class="weather__speed-data"></span></p>
+        <p class="weather__deg">Wind deg: <span class="weather__deg-data"></span></p>
+    </article>
+</body>
+</html>
