@@ -1,6 +1,8 @@
 'use strict';
 
-const formElem = document.querySelector('.form--registration');
+const getSelector = (selector) => {
+    return document.querySelector(selector);
+}
 
 const initFormData = (form) => {
     const formData = new FormData(form);
@@ -14,18 +16,18 @@ const initFormData = (form) => {
     }
 }
 
-formElem.addEventListener('submit', (e) => {
+const formSubmit = (e) => {
     e.preventDefault();
 
-    const sectionInputElem = document.querySelector('.section-input');
-    const sectionOutputElem = document.querySelector('.section-output');
-    const nameElem = document.querySelector('.output-name');
-    const surnameElem = document.querySelector('.output-surname');
-    const birthElem = document.querySelector('.output-birth');
-    const genderElem = document.querySelector('.output-gender');
-    const cityElem = document.querySelector('.output-city');
-    const addressElem = document.querySelector('.output-address');
-    const languageElem = document.querySelector('.output-language');
+    const sectionInputElem = getSelector('.section-input');
+    const sectionOutputElem = getSelector('.section-output');
+    const nameElem = getSelector('.output-name');
+    const surnameElem = getSelector('.output-surname');
+    const birthElem = getSelector('.output-birth');
+    const genderElem = getSelector('.output-gender');
+    const cityElem = getSelector('.output-city');
+    const addressElem = getSelector('.output-address');
+    const languageElem = getSelector('.output-language');
     const getFormData = initFormData(formElem);
 
     sectionInputElem.classList.add('is-hidden');
@@ -38,4 +40,7 @@ formElem.addEventListener('submit', (e) => {
     getFormData(cityElem, 'city');
     getFormData(addressElem, 'address');
     getFormData(languageElem, 'language');
-})
+}
+
+const formElem = document.querySelector('.form--registration');
+formElem.addEventListener('submit', formSubmit);
