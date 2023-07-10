@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="author" content="Ihor Zuikov">
+    <title>Front End Pro</title>
+    <script src="index.js" defer></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .form {
+            max-width: 300px;
+        }
+        .form__row {
+            margin-bottom: 16px;
+        }
+        .text-field {
+            width: 100%;
+            height: 32px;
+            padding: 0 8px;
+        }
+        .is-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="section-input">
+        <h2>Registration form</h2>
+        <form class="form form--registration" action="">
+            <div class="form__row">
+                <label for="field-name">Your name</label><br />
+                <input class="text-field" id="field-name" type="text" name="name" required />
+            </div>
+
+            <div class="form__row">
+                <label for="field-surname">Your surname</label><br />
+                <input class="text-field" id="field-surname" type="text" name="surname" required />
+            </div>
+
+            <div class="form__row">
+                <label for="field-birth">Your date of birth</label><br />
+                <input class="text-field" id="field-birth" type="text" name="birth" required />
+            </div>
+
+            <div class="form__row">
+                <fieldset>
+                    <legend>Gender</legend>
+
+                    <input type="radio" id="gender-male" name="gender" value="male" checked />
+                    <label for="gender-male">Male</label><br />
+
+                    <input type="radio" id="gender-female" name="gender" value="female" />
+                    <label for="gender-female">Female</label><br />
+                </fieldset>
+            </div>
+
+            <div class="form__row">
+                <select name="city" required>
+                    <option value="" selected disabled hidden>-- choose a city --</option>
+                    <option value="Kyiv">Kyiv</option>
+                    <option value="Lviv">Lviv</option>
+                    <option value="London">London</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                </select>
+            </div>
+
+            <div class="form__row">
+                <label for="field-address">Your address</label><br />
+                <textarea name="address" id="field-address" cols="34" rows="5" required></textarea>
+            </div>
+
+            <div class="form__row">
+                <fieldset>
+                    <legend>Your language</legend>
+
+                    <input type="checkbox" id="lang-urk" name="language" value="ukrainian" />
+                    <label for="lang-urk">Ukrainian</label><br>
+
+                    <input type="checkbox" id="lang-eng" name="language" value="english" />
+                    <label for="lang-eng">English</label><br>
+
+                    <input type="checkbox" id="lang-spa" name="language" value="spanish" />
+                    <label for="lang-spa">Spanish</label><br>
+                </fieldset>
+            </div>
+
+            <input type="submit" value="Submit data">
+        </form>
+    </section>
+    <div class="section-output is-hidden">
+        <h2>Data you entered</h2>
+        <p>Your name: <span class="output-name"></span></p>
+        <p>Your surname: <span class="output-surname"></span></p>
+        <p>Your date of birth: <span class="output-birth"></span></p>
+        <p>Your gender: <span class="output-gender"></span></p>
+        <p>Your city: <span class="output-city"></span></p>
+        <p>Your address: <span class="output-address"></span></p>
+        <p>Your language: <span class="output-language"></span></p>
+    </div>
+</body>
+</html>
